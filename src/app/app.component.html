@@ -2,9 +2,8 @@
 <div>
   <button type="button" (click)="navigate$.next(-1)">-1</button>
   date:
-  <input type="date" [valueAsDate]="date$ | async" (change)="setDate($event)" />
+  <input type="date" [valueAsDate]="date$ | async" (change)="($event)" />
   buttons:
-  <button type="button" (click)="navigateNext()">+1</button>
+  <button type="button" (click)="navigate$.next(1)">+1</button>
   <p>date: {{ date$ | async }}</p>
-  <p>result: {{ result$ | async }}</p>
 </div>
