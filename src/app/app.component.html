@@ -1,9 +1,9 @@
-<blockquote>Dates emited</blockquote>
+<blockquote>Number emited</blockquote>
 <div>
   <button type="button" (click)="navigate$.next(-1)">-1</button>
   date:
-  <input type="date" [valueAsDate]="date$ | async" (change)="($event)" />
+  <input type="number" [value]="output$ | async" (change)="setValue($event)" />
   buttons:
   <button type="button" (click)="navigate$.next(1)">+1</button>
-  <p>date: {{ date$ | async }}</p>
+  <p>out: {{ output$ | async }}</p>
 </div>
